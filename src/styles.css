@@ -1,0 +1,211 @@
+@import "tailwindcss" source(none);
+@source "../src";
+@import "tw-animate-css";
+
+@import "@fontsource-variable/inter";
+@import "@fontsource/figtree/400.css";
+@import "@fontsource/figtree/500.css";
+@import "@fontsource/figtree/600.css";
+@import "@fontsource/figtree/700.css";
+
+@custom-variant dark (&:is(.dark *));
+
+/*
+ * Design system — Sistema de Credenciamento HUM.
+ * Institutional hospital identity built around a forest-green palette.
+ * All colors use oklch. Define tokens here, never ad-hoc colors in components.
+ */
+
+@theme inline {
+  --font-sans: "Inter Variable", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Figtree", ui-sans-serif, system-ui, sans-serif;
+
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --radius-2xl: calc(var(--radius) + 8px);
+
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-ring-offset-background: var(--background);
+
+  --color-brand: var(--brand);
+  --color-brand-foreground: var(--brand-foreground);
+  --color-brand-dark: var(--brand-dark);
+
+  --color-success: var(--success);
+  --color-success-foreground: var(--success-foreground);
+  --color-warning: var(--warning);
+  --color-warning-foreground: var(--warning-foreground);
+  --color-info: var(--info);
+  --color-info-foreground: var(--info-foreground);
+
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+}
+
+:root {
+  --radius: 0.625rem;
+
+  --background: oklch(0.985 0.006 145);
+  --foreground: oklch(0.23 0.025 160);
+
+  --card: oklch(1 0 0);
+  --card-foreground: oklch(0.23 0.025 160);
+  --popover: oklch(1 0 0);
+  --popover-foreground: oklch(0.23 0.025 160);
+
+  --primary: oklch(0.49 0.115 157);
+  --primary-foreground: oklch(0.985 0.01 145);
+
+  --secondary: oklch(0.95 0.025 150);
+  --secondary-foreground: oklch(0.34 0.06 158);
+
+  --muted: oklch(0.965 0.012 150);
+  --muted-foreground: oklch(0.52 0.025 158);
+
+  --accent: oklch(0.93 0.045 152);
+  --accent-foreground: oklch(0.33 0.07 158);
+
+  --destructive: oklch(0.58 0.21 27);
+  --destructive-foreground: oklch(0.985 0.01 145);
+
+  --border: oklch(0.9 0.018 150);
+  --input: oklch(0.9 0.018 150);
+  --ring: oklch(0.49 0.115 157);
+
+  --brand: oklch(0.49 0.115 157);
+  --brand-foreground: oklch(0.985 0.01 145);
+  --brand-dark: oklch(0.37 0.085 158);
+
+  --success: oklch(0.55 0.13 155);
+  --success-foreground: oklch(0.985 0.01 145);
+  --warning: oklch(0.78 0.15 75);
+  --warning-foreground: oklch(0.3 0.06 70);
+  --info: oklch(0.62 0.11 235);
+  --info-foreground: oklch(0.985 0.01 235);
+
+  --chart-1: oklch(0.49 0.115 157);
+  --chart-2: oklch(0.65 0.13 150);
+  --chart-3: oklch(0.78 0.15 75);
+  --chart-4: oklch(0.62 0.11 235);
+  --chart-5: oklch(0.58 0.21 27);
+
+  /* Light-green institutional sidebar (matches prototype) */
+  --sidebar: oklch(0.945 0.035 152);
+  --sidebar-foreground: oklch(0.34 0.06 158);
+  --sidebar-primary: oklch(0.44 0.11 157);
+  --sidebar-primary-foreground: oklch(0.985 0.01 145);
+  --sidebar-accent: oklch(1 0 0);
+  --sidebar-accent-foreground: oklch(0.36 0.075 158);
+  --sidebar-border: oklch(0.88 0.03 150);
+  --sidebar-ring: oklch(0.49 0.115 157);
+}
+
+.dark {
+  --background: oklch(0.2 0.025 160);
+  --foreground: oklch(0.95 0.012 145);
+  --card: oklch(0.26 0.03 160);
+  --card-foreground: oklch(0.95 0.012 145);
+  --popover: oklch(0.26 0.03 160);
+  --popover-foreground: oklch(0.95 0.012 145);
+  --primary: oklch(0.65 0.13 152);
+  --primary-foreground: oklch(0.2 0.03 160);
+  --secondary: oklch(0.3 0.035 160);
+  --secondary-foreground: oklch(0.95 0.012 145);
+  --muted: oklch(0.3 0.035 160);
+  --muted-foreground: oklch(0.7 0.025 150);
+  --accent: oklch(0.33 0.05 158);
+  --accent-foreground: oklch(0.95 0.012 145);
+  --destructive: oklch(0.62 0.2 25);
+  --destructive-foreground: oklch(0.98 0.01 145);
+  --border: oklch(1 0 0 / 12%);
+  --input: oklch(1 0 0 / 15%);
+  --ring: oklch(0.65 0.13 152);
+  --brand: oklch(0.65 0.13 152);
+  --brand-foreground: oklch(0.2 0.03 160);
+  --brand-dark: oklch(0.3 0.05 158);
+  --success: oklch(0.65 0.13 152);
+  --success-foreground: oklch(0.2 0.03 160);
+  --warning: oklch(0.78 0.15 75);
+  --warning-foreground: oklch(0.25 0.05 70);
+  --info: oklch(0.65 0.11 235);
+  --info-foreground: oklch(0.15 0.03 235);
+  --sidebar: oklch(0.24 0.03 160);
+  --sidebar-foreground: oklch(0.95 0.012 145);
+  --sidebar-primary: oklch(0.65 0.13 152);
+  --sidebar-primary-foreground: oklch(0.2 0.03 160);
+  --sidebar-accent: oklch(0.32 0.045 158);
+  --sidebar-accent-foreground: oklch(0.95 0.012 145);
+  --sidebar-border: oklch(1 0 0 / 12%);
+  --sidebar-ring: oklch(0.65 0.13 152);
+}
+
+@layer base {
+  * {
+    border-color: var(--color-border);
+  }
+
+  body {
+    background-color: var(--color-background);
+    color: var(--color-foreground);
+    font-family: var(--font-sans);
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: var(--font-display);
+    letter-spacing: -0.01em;
+  }
+}
+
+@utility brand-gradient {
+  background-image: linear-gradient(135deg, var(--brand) 0%, var(--brand-dark) 100%);
+}
+
+/* Section title with a short green underline accent — used across admin pages. */
+@utility page-underline {
+  &::after {
+    content: "";
+    display: block;
+    width: 2.75rem;
+    height: 3px;
+    margin-top: 0.4rem;
+    border-radius: 999px;
+    background-color: var(--brand);
+  }
+}
