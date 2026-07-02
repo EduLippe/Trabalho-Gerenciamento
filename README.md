@@ -12,11 +12,10 @@ PASSO A PASSO - COMO EXECUTAR O PROJETO
 
 3. INSTALAR DEPENDÊNCIAS 
 
-  npm install
+ npm install
 
-4. EXECUTAR O PROJETO
-
-  npm run dev
+4. EXECUTAR O PROJET
+        npm run dev
 
 OBSERVAÇÕES:
 - Certifique-se de ter Git instalado
