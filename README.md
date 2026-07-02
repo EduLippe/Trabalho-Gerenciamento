@@ -10,11 +10,17 @@ PASSO A PASSO - COMO EXECUTAR O PROJETO
 
   cd Trabalho-Gerenciamento
 
-3. INSTALAR DEPENDÊNCIAS 
+3. VERIFICAR A BRANCH (IMPORTANTE)
+
+  git branch
+  
+  git checkout main - Se não estiver na main
+  
+4. INSTALAR DEPENDÊNCIAS 
 
  npm install
 
-4. EXECUTAR O PROJET
+5. EXECUTAR O PROJET
         npm run dev
 
 OBSERVAÇÕES:
